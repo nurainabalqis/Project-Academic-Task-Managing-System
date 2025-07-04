@@ -1,0 +1,321 @@
+:root {
+    --primary: #2f4156;
+    --primary-light: #567c8d;
+    --secondary: #1d2734;
+    --accent: #f72585;
+    --light: #f8f9fa;
+    --dark: #212529;
+    --gray: #6c757d;
+    --light-gray: #e9ecef;
+    --border-radius: 12px;
+    --box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c8d9e6 100%);
+    color: var(--dark);
+    line-height: 1.6;
+    min-height: 100vh;
+    transition: var(--transition);
+}
+
+body.login-page {
+    background: #c8d9e6;
+}
+
+.dark-mode {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #e6e6e6;
+}
+
+input, select, textarea, button {
+    display: block;
+    margin: 12px 0;
+    padding: 12px 15px;
+    width: 100%;
+    max-width: 90%;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+    background: white;
+    transition: var(--transition);
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.15);
+}
+
+button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 12px 20px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+    margin: 10px;
+}
+
+button:hover {
+    background: var(--secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(67, 97, 238, 0.25);
+}
+
+.btn-role {
+    background: var(--primary-light);
+    border: none;
+    padding: 10px 16px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px 10px 0 0;
+    transition: var(--transition);
+    box-shadow: var(--box-shadow);
+    width: auto;
+    min-width: 140px;
+}
+
+.btn-role:hover {
+    background: var(--secondary);
+    transform: scale(1.03);
+}
+
+.btn-back {
+    background: var(--primary);
+    border: none;
+    padding: 10px 16px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px 10px 0 0;
+    transition: var(--transition);
+    box-shadow: var(--box-shadow);
+    width: auto;
+    min-width: 140px;
+}
+
+.btn-role:hover {
+    background: var(--secondary);
+    transform: scale(1.03);
+}
+
+
+form {
+    max-width: 550px;
+    margin: 30px auto;
+    padding: 30px;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 80px auto;
+    margin-top: 10px;
+    padding: 40px;
+    background: #f5efeb;
+    box-shadow: 0 8px 16px #375276;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s ease;
+}
+
+.login-container input:focus {
+    border-color: #2f4156;
+    outline: none;
+}
+
+.system-title {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.page-title {
+    color: #2f4156;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.error {
+    color: #e53935;
+    background: #ffebee;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 15px 0;
+    border-left: 4px solid #e53935;
+}
+
+.success {
+    color: #43a047;
+    background: #e8f5e9;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 15px 0;
+    border-left: 4px solid #43a047;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 25px;
+    background: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+table th, table td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+table th {
+    background: var(--primary);
+    color: white;
+    font-weight: 600;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+table tr:hover td {
+    background: rgba(67, 97, 238, 0.03);
+}
+
+#progressContainer {
+    width: 100%;
+    max-width: 550px;
+    background: var(--light-gray);
+    border-radius: var(--border-radius);
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+#progressBar {
+    height: 22px;
+    background: linear-gradient(90deg, var(--primary), var(--primary-light));
+    border-radius: var(--border-radius);
+    width: 0%;
+    transition: width 0.7s ease-in-out;
+    position: relative;
+}
+
+#progressBar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+#progressLabel {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    font-weight: 600;
+    color: var(--dark);
+    font-size: 16px;
+}
+
+/* Role badges */
+.role-badge {
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-block;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.student-badge {
+    background: linear-gradient(135deg, #4CAF50, #43a047);
+    color: white;
+}
+
+.lecturer-badge {
+    background: linear-gradient(135deg, #2196F3, #1976d2);
+    color: white;
+}
+
+.academic_coordinator-badge {
+    background: linear-gradient(135deg, #9C27B0, #7b1fa2);
+    color: white;
+}
+
+/* Role-specific sections */
+.lecturer-features, .coordinator-features {
+    padding: 20px;
+    margin: 25px 0;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    background: white;
+    border-top: 4px solid;
+}
+
+.lecturer-features {
+    border-top-color: #2196F3;
+}
+
+.coordinator-features {
+    border-top-color: #9C27B0;
+}
+
+.lecturer-features h3, .coordinator-features h3 {
+    margin-top: 0;
+    color: var(--dark);
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lecturer-features h3::before, .coordinator-features h3::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 30px;
+    border-radius: 4px;
+}
+
+.lecturer-features h3::before {
+    background: #2196F3;
+}
+
+.coordinator-features h3::before {
+    background: #9C27B0;
+}
