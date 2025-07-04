@@ -1,3 +1,4 @@
+![Image](https://github.com/user-attachments/assets/528899cf-0ed5-47c4-847e-3a8ff0df9660)
 <h1 align="center">🎓 Academic Task Managing System</h1>
 
 <p align="center">
